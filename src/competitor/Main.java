@@ -3,8 +3,8 @@ package competitor;
 public class Main {
 
     public static void main(String[] args) {
-        Participant human = new Human("Max", 70, 1);
-        Participant robot = new Robot("Robocop", 20, 5);
+        Participant human = new Human("Max", 20, 5);
+        Participant robot = new Robot("Robocop", 70, 1);
         Participant cat = new Cat("Garfield", 50, 2);
         Participant cat2 = new Cat("Murzik", 70, 5);
         Participant[] arrayOfParticipants = new Participant[]{human, robot, cat, cat2};

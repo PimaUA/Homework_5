@@ -8,7 +8,7 @@ public interface Obstacles {
     default void quitCompetition(Participant participant, Treadmill treadmill, Wall wall) {
         if (participant.maxRunDistance < treadmill.lengthOfTreadmill
                 && participant.maxJumpHeight < wall.heightOfWall) {
-            Obstacles.runAndJumpFailed(this, participant, wall, treadmill);               /*if everything failed*/
+            Obstacles.runAndJumpFailed(this, participant, wall, treadmill);  /*if everything failed*/
         } else if (participant.maxRunDistance < treadmill.lengthOfTreadmill) {
             Obstacles.runFailed(participant, treadmill);                                  /*if run not passed*/
         } else if (participant.maxJumpHeight < wall.heightOfWall) {
