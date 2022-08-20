@@ -9,7 +9,6 @@ public class Wall implements Obstacles {
 
     @Override
     public void overcome(Participant participant) {
-
         if (participant.maxJumpHeight < heightOfWall) {
             jumpFailed(participant);
         } else if (participant.maxJumpHeight > heightOfWall) {

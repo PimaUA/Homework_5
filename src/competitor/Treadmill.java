@@ -10,7 +10,6 @@ public class Treadmill implements Obstacles {
     @Override
     public void overcome(Participant participant) {
         if (participant.maxRunDistance < lengthOfTreadmill) {
-
             runFailed(participant);
         } else if (participant.maxRunDistance > lengthOfTreadmill) {
             runSuccess(participant);
