@@ -1,16 +1,17 @@
 package shapes;
 
-public class Square extends Shape implements ShapeInterface {
+public class Square implements Computational {
+    private final double side;
+
     public Square(double side) {
         if (side <= 0) {
             throw new IllegalArgumentException("Fields must be >=0");
         }
-        super.side = side;
+        this.side = side;
     }
 
     @Override
     public double calculateArea() {
-        area = Math.pow(side, 2);
-        return area;
+        return Math.pow(side, 2);
     }
 }

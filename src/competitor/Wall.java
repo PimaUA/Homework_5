@@ -7,9 +7,31 @@ public class Wall implements Obstacles {
         this.heightOfWall = heightOfWall;
     }
 
-    //if jump you can overcome wall
     @Override
     public void overcome(Participant participant) {
-        participant.jump(this);
+
+        if (participant.maxJumpHeight < heightOfWall) {
+            jumpFailed(participant);
+        } else if (participant.maxJumpHeight > heightOfWall) {
+            jumpSuccess(participant);
+        }
+    }
+
+    //jump success case output
+    void jumpSuccess(Participant participant) {
+        System.out.println(participant.getClass().getSimpleName() + " " + participant.name + " jumped "
+                + participant.maxJumpHeight
+                + ((participant.maxJumpHeight == 1) ? " meter " : " meters ") + "over the wall of "
+                + heightOfWall + ((heightOfWall == 1) ? " meter " : " meters ") + "high.");
+    }
+
+    // jump failed case output
+    void jumpFailed(Participant participant) {
+        System.out.println(participant.getClass().getSimpleName() + " " + participant.name
+                + " hasn't passed wall " + "with height of "
+                + heightOfWall + ((heightOfWall == 1) ? " meter." : " meters. ")
+                + "Jumped " + participant.maxJumpHeight
+                + ((participant.maxJumpHeight == 1) ? " meter." : " meters. ")
+                + participant.name + " disqualified.");
     }
 }

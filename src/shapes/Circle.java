@@ -1,7 +1,7 @@
 package shapes;
 
-public class Circle extends Shape implements ShapeInterface {
-    private double radius;
+public class Circle implements Computational {
+    private final double radius;
 
     public Circle(double radius) {
         if (radius <= 0) {
@@ -12,7 +12,6 @@ public class Circle extends Shape implements ShapeInterface {
 
     @Override
     public double calculateArea() {
-        area = PI * Math.pow(radius, 2);
-        return area;
+        return Math.pow(radius, 2)*PI;
     }
 }

@@ -2,7 +2,7 @@ package competitor;
 
 public interface Competitor {
 
-    void run(Treadmill treadmill);
+    void run(Obstacles obstacles);
 
-    void jump(Wall wall);
+    void jump(Obstacles obstacles);
 }
