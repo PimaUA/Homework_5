@@ -8,7 +8,7 @@ public class Main {
         for (Participant eachParticipant : arrayOfCompetitors)
             for (Obstacles arrayOfObstacle : arrayOfObstacles) {
                 eachParticipant.overcomeObstacle(arrayOfObstacle);
-                if (eachParticipant.isDisqualified()) {
+                if (eachParticipant.getIsDisqualified()) {
                     break;
                 }
             }

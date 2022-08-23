@@ -55,7 +55,7 @@ public abstract class Participant implements Competitor {
         }
     }
 
-    public boolean isDisqualified() {
+    public boolean getIsDisqualified() {
         return isDisqualified;
     }
 }
