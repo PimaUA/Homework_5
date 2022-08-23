@@ -12,6 +12,7 @@ public class Circle implements Computational {
 
     @Override
     public double calculateArea() {
-        return Math.pow(radius, 2)*PI;
+        double PI = 3.14;
+        return Math.pow(radius, 2) * PI;
     }
 }

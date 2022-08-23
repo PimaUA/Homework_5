@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
         Computational circle = new Circle(4);
-        Computational triangle = new Triangle(6, 2);
+        Computational triangle = new Triangle(6, 2, 5);
         Computational square = new Square(7);
 
         Computational[] shapesArray = new Computational[]{circle, triangle, square};

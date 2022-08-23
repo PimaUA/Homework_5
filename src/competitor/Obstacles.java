@@ -2,7 +2,9 @@ package competitor;
 
 public interface Obstacles {
 
-    void overcome(Participant participant);
+    boolean overcome(int parameter);
+
+    String getObstaclesOutput();
 }
 
 
